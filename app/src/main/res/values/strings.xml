@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Filmes OMDB API</string>
+    <string name="app_name_toolbar">Filmes OMDB API toolbar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_filmes">App filmes</string>
+    <string name="trabalho_da_disciplina">Trabalho da Disciplina</string>
+    <string name="menu_aberto">Menu aberto</string>
+    <string name="menu_fechado">Menu fechado</string>
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Modo Busca Titulo -->
+    <item android:id="@+id/modoTituloMenuItem"
+          android:title="Modo título"
+          android:icon="@drawable/cinema"
+    />
+    <!-- Modo Busca ID -->
+    <item android:id="@+id/modoIdMenuItem"
+          android:title="Modo id"
+          android:icon="@drawable/cinema"
+    />
+    <!-- Sair -->
+    <item android:id="@+id/sairMenuItem"
+          android:title="Sair"
+          android:icon="@drawable/ic_launcher_foreground"
+    />
+</menu>
