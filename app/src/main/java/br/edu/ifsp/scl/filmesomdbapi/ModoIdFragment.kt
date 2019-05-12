@@ -22,7 +22,9 @@ class ModoIdFragment: ModoFilmeFragment() {
 
         buscarButton.setOnClickListener(){
             //Mostrar confirmação de click
-            Toast.makeText(layoutFragment.context,"Clicou no botão", Toast.LENGTH_SHORT).show()
+            Toast.makeText(layoutFragment.context,"Clicou no botão ModoID", Toast.LENGTH_SHORT).show()
+
+
         }
 
         return layoutFragment
