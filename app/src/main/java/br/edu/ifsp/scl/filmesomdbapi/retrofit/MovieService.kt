@@ -74,6 +74,25 @@ class MovieService() {
             }
         })
     }
+
+
+
+    fun buscarFilmePorId(idString: String) {
+        chamadaApi.requestFilmByID(idString).enqueue( object : Callback<Movie> {
+            override fun onFailure(call: Call<Movie>, t: Throwable) {
+                call.cancel()
+                responseOmdb?.onResponseFail(t)
+            }
+
+            override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
+                val body = response.body()
+                if (body != null){
+                    responseOmdb?.onResponse(body)
+                }
+            }
+        })
+    }
+
 }
 
 

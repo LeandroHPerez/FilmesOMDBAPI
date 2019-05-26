@@ -45,24 +45,26 @@ class MainActivity : AppCompatActivity() {
         menuNavigationView.setNavigationItemSelectedListener { onNavigationItemSelected(it) }
 
         // Inicia nesse modo como padrão.
-        //substituiFragment("MODO_TITULO")
+        substituiFragment("MODO_TITULO")
 
+
+        //Trecho para testes do desenvolvedor
+        /*
 
         searchButton.setOnClickListener {
             // Testa se o usuário digitou alguma coisa para buscar
             Toast.makeText(this,"Clicou", Toast.LENGTH_SHORT).show()
 
             if (searchField.text.isNotEmpty()) {
-                movieService.buscarFilmeComOTitulo(searchField.text.toString())
+                //movieService.buscarFilmeComOTitulo(searchField.text.toString())
+
+                movieService.buscarFilmePorId(searchField.text.toString())
             } else {
                 // Senão, mostra uma mensagem na parte debaixo do LinearLayout
                 Toast.makeText(this,"É preciso digitar um título a ser buscado", Toast.LENGTH_SHORT).show()
                 //mainView.snackbar("É preciso digitar um título a ser buscado")
             }
         }
-
-
-
 
 
         movieService.responseOmdb = object : MovieService.ResponseOmdb {
@@ -88,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+*/
 
     }
 
@@ -97,12 +100,13 @@ class MainActivity : AppCompatActivity() {
         val modoFilmeFragment = if (modoFragment.equals("MODO_TITULO")) ModoTituloFragment() else ModoIdFragment()
 
 
-
+/*
         val testString : String = "example only"
 
         var bundle = Bundle()
         bundle.putString("test", testString)
         modoFilmeFragment.arguments = bundle
+        */
 
 
 

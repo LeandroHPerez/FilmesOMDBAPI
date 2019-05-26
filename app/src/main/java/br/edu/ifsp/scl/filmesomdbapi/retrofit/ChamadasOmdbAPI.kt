@@ -9,4 +9,7 @@ interface ChamadasOmdbAPI {
 
     @GET("/")
     fun requestFilmByTitle(@Query("t") title: String): Call<Movie>
+
+    @GET("/")
+    fun requestFilmByID(@Query("i") id: String): Call<Movie>
 }
