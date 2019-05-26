@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
     <!-- Titulo -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Entre com o titulo do filme"
-        android:textSize="18sp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Entre com o titulo do filme"
+            android:textSize="18sp"/>
 
     <EditText
             android:id="@+id/edit_text_titulo_filme"
@@ -18,89 +18,178 @@
             android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/buscarButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar"/>
-
-
-    <TextView
+            android:id="@+id/buscarButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Título"
-            android:textSize="18sp"/>
+            android:text="Buscar"/>
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Ano"
-            android:textSize="18sp"/>
+    <ScrollView
+                android:orientation="vertical"
+                android:background="@color/backgroundColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Data de lançamento"
-            android:textSize="18sp"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_gravity="center" android:paddingTop="90dp">
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Diretor"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Atores"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Idioma"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="País"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Nota de avaliação"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Nota IMDb"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Tipo"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Produtora"
-            android:textSize="18sp"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Title:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/title_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
 
 
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Ano:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/year_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Lançamento:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/released_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Diretor:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/director_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Atores:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/actors_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Idioma:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/idioma_textView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Pais:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/country_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Notas de avaliação:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/avaliacao_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Nota iMDb:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/notaImdb_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Tipo:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/type_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="Produtora:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/produtora_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/gray"
+                  android:textSize="18sp"
+                  android:text="WebSite:"
+                  android:textStyle="bold"/>
+        <TextView android:id="@+id/website_textView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  android:textSize="16sp"/>
+    </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

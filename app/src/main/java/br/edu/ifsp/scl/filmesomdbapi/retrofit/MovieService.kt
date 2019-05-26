@@ -18,7 +18,8 @@ import java.lang.System.err
 import android.widget.Toast
 
 
-class MovieService(mainActivity: MainActivity) {
+//class MovieService(mainActivity: MainActivity) {
+class MovieService() {
 
     interface ResponseOmdb{
         fun onResponse(movie: Movie)

@@ -22,7 +22,8 @@ import org.jetbrains.anko.design.snackbar
 
 class MainActivity : AppCompatActivity() {
 
-    private val movieService = MovieService(this)
+    //private val movieService = MovieService(this)
+    private val movieService = MovieService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,13 +69,15 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(movie: Movie) {
                 Toast.makeText(this@MainActivity, "sucesso", Toast.LENGTH_LONG).show()
                 if (movie != null) {
-                    Log.d("tag",movie.title)
-                    Log.d("tag",movie.year)
-                    Log.d("tag",movie.released)
-                    Log.d("tag",movie.genre)
-                    Log.d("tag",movie.director)
-                    Log.d("tag",movie.poster)
-                    Log.d("tag",movie.website)
+                    Log.d("tag_minha",movie.title)
+                    Log.d("tag_minha",movie.year)
+                    Log.d("tag_minha",movie.released)
+                    Log.d("tag_minha",movie.genre)
+                    Log.d("tag_minha",movie.director)
+                    Log.d("tag_minha",movie.poster)
+                    Log.d("tag_minha",movie.website)
+
+                    substituiFragment("MODO_TITULO", movie)
                 }
 //                substituiFragment()
             }
@@ -86,6 +89,34 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    private fun substituiFragment(modoFragment: String, movie: Movie){
+
+        // verifica qual fragment vai instanciar
+        val modoFilmeFragment = if (modoFragment.equals("MODO_TITULO")) ModoTituloFragment() else ModoIdFragment()
+
+
+
+        val testString : String = "example only"
+
+        var bundle = Bundle()
+        bundle.putString("test", testString)
+        modoFilmeFragment.arguments = bundle
+
+
+
+
+
+
+
+
+
+
+        // Transação para substituição de fragment
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment, modoFilmeFragment) //Chama o fragment do modo escolhido
+        fragmentTransaction.commit()
     }
 
     private fun substituiFragment(modoFragment: String){
